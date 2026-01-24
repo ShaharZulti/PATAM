@@ -30,7 +30,6 @@ public class Topic {
     }
 
     public void publish(Message m){
-        // System.out.println("Publishing message on topic " + this.name + ": " + m.asDouble);
         for (Agent sub : this.subs) {
             sub.callback(this.name, m);
         }
@@ -46,3 +45,4 @@ public class Topic {
         this.pubs.remove(a);
     }
 }
+
