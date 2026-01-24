@@ -12,6 +12,13 @@ public class Topic {
         this.name=name;
     }
 
+    public List<Agent> getSubscribers() {
+        return this.subs;
+    }
+    public List<Agent> getPublishers() {
+        return this.pubs;
+    }
+    
     public void subscribe(Agent a){
         if (!this.subs.contains(a)) {
             this.subs.add(a);
